@@ -28,11 +28,12 @@ import utils as utils
 
 import wandb
 import os
+import sys
+sys.path.insert(0,'..')
 
 
 logging = True
 name = 'Tf-replication'
-os.environ['TFDS_DATA_DIR'] = '/home/data2/objectcentric_video/clevr'
 
 if logging:
     os.environ['WANDB_API_KEY'] = 'ef94a92678c9a088899b27fb3eb2ca4b7c19642c'
