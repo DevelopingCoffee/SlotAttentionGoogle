@@ -14,6 +14,8 @@
 # limitations under the License.
 
 """Training loop for object discovery with Slot Attention."""
+import sys
+sys.path.insert(0,'..')
 import datetime
 import time
 
@@ -28,8 +30,7 @@ import utils as utils
 
 import wandb
 import os
-import sys
-sys.path.insert(0,'..')
+
 
 
 logging_wandb = True
