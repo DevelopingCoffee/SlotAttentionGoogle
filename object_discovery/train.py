@@ -32,10 +32,10 @@ import sys
 sys.path.insert(0,'..')
 
 
-logging = True
+logging_wandb = True
 name = 'Tf-replication'
 
-if logging:
+if logging_wandb:
     os.environ['WANDB_API_KEY'] = 'ef94a92678c9a088899b27fb3eb2ca4b7c19642c'
     wandb.init(project='Object-centric Learning(Slot attention - TF)', name=name)
     wandb.config.its = 75000
@@ -145,7 +145,7 @@ def main(argv):
       # Save the checkpoint of the model.
       saved_ckpt = ckpt_manager.save()
       logging.info("Saved checkpoint: %s", saved_ckpt)
-    if logging:
+    if logging_wandb:
       wandb.log({"loss": loss_value})
       wandb.log({"step": global_step})
 
